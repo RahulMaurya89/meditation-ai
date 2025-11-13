@@ -1,0 +1,17 @@
+.logo {
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure logo looks good in both themes */
+[data-theme="dark"] .logo {
+  filter: brightness(1);
+}
+
+[data-theme="light"] .logo {
+  filter: brightness(0.9);
+}

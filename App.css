@@ -1,0 +1,112 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #dbeafe 50%, #e0e7ff 75%, #f5f3ff 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  /* Performance: Use contain for better rendering */
+  contain: layout style;
+}
+
+/* Ensure smooth transitions */
+* {
+  box-sizing: border-box;
+}
+
+.custom-toast-container {
+  width: min(90vw, 520px) !important;
+  margin: 5% auto 0 !important;
+  padding: 0 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .custom-toast-container {
+    width: min(92vw, 420px) !important;
+    margin-top: 8% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-toast-container {
+    width: 94vw !important;
+    margin-top: 12% !important;
+    padding: 0.5rem !important;
+  }
+}
+
+.Toastify__toast--warning {
+  background: #f2f2f2 !important;
+  color: #2b2b2b !important;
+  border: 1px solid #d5d5d5;
+}
+
+.Toastify__close-button--warning {
+  color: #2b2b2b !important;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Remove all animation layers for performance */
+.grid-animation-layer {
+  display: none;
+}
+
+/* Ensure all content is above the grid */
+.app-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Loading spinner styles */
+.page-loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  gap: 1.5rem;
+}
+
+.loader-spinner {
+  width: 56px;
+  height: 56px;
+  border: 5px solid rgba(59, 130, 246, 0.15);
+  border-left-color: #3b82f6;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Performance: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .loader-spinner {
+    animation: none;
+    border-left-color: var(--primary-color);
+  }
+}

@@ -1,0 +1,29 @@
+/* Shared CSS variables for the project
+   - Place variables here and import this file into component CSS files
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Default (dark) theme variables - scoped to :root so components importing this file
+   won't accidentally override theme-specific overrides. */
+
+/* Light theme overrides. These are explicit so toggling
+   data-theme="light" on the <html> element will reliably
+   switch the variables even if component CSS is loaded later. */
+:root[data-theme='light'] {
+  --primary-gradient: linear-gradient(135deg, #9fb7ff 0%, #caa0ff 100%);
+  --secondary-gradient: linear-gradient(135deg, #a8ddff 0%, #bff7ff 100%);
+  --accent-gradient: linear-gradient(135deg, #ffd6f3 0%, #ffb8ac 100%);
+  --success-gradient: linear-gradient(135deg, #9ff1c5 0%, #79f7e6 100%);
+
+  --glass-bg: rgba(10, 10, 10, 0.04);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --glass-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f6f6;
+  --bg-tertiary: #efefef;
+  --text-primary: #0a0a0a;
+  --text-secondary: #666666;
+  --text-muted: #6b7280;
+  --border-color: rgba(0, 0, 0, 0.06);
+}

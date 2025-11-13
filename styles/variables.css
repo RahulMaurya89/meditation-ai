@@ -1,0 +1,71 @@
+/* Shared CSS variables for the project - Meditation Theme
+   - Place variables here and import this file into component CSS files
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Default (dark) theme variables - Meditation colors
+   Focused on calming purples, blues, and greens for a zen atmosphere */
+:root {
+  /* Dark mode meditation gradients */
+  --primary-gradient: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); /* Deep purple */
+  --secondary-gradient: linear-gradient(135deg, #059669 0%, #047857 100%); /* Forest green */
+  --accent-gradient: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); /* Deep blue */
+  --success-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%); /* Success green */
+  --meditation-gradient: linear-gradient(135deg, #6d28d9 0%, #5b21b6 50%, #4c1d95 100%); /* Deep zen purple */
+  --calm-gradient: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #1e293b 100%); /* Night blue */
+
+  --glass-bg: rgba(15, 15, 25, 0.85);
+  --glass-border: rgba(139, 92, 246, 0.15);
+  --glass-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+  --bg-primary: #0f0f19;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #25254a;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --border-color: rgba(139, 92, 246, 0.12);
+  
+  /* Meditation-specific colors - dark mode */
+  --meditation-primary: #8b5cf6;
+  --meditation-secondary: #10b981;
+  --meditation-accent: #3b82f6;
+  --calm-blue: #60a5fa;
+  --peace-purple: #a78bfa;
+  --zen-green: #34d399;
+  --deep-meditation: #4c1d95;
+  --twilight: #1e293b;
+}
+
+/* Light theme overrides - Meditation peaceful colors
+   These create a serene, mindful environment */
+:root[data-theme='light'] {
+  /* Meditation-inspired gradients */
+  --primary-gradient: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); /* Soft purple */
+  --secondary-gradient: linear-gradient(135deg, #6ee7b7 0%, #10b981 100%); /* Calming green */
+  --accent-gradient: linear-gradient(135deg, #93c5fd 0%, #3b82f6 100%); /* Peaceful blue */
+  --success-gradient: linear-gradient(135deg, #86efac 0%, #34d399 100%); /* Mindful green */
+  --meditation-gradient: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 50%, #a78bfa 100%); /* Zen purple flow */
+  --calm-gradient: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 50%, #60a5fa 100%); /* Tranquil blue */
+
+  --glass-bg: rgba(248, 250, 252, 0.75);
+  --glass-border: rgba(139, 92, 246, 0.1);
+  --glass-shadow: 0 20px 60px rgba(139, 92, 246, 0.08);
+
+  --bg-primary: #faf5ff; /* Soft lavender white */
+  --bg-secondary: #f5f3ff; /* Light purple tint */
+  --bg-tertiary: #ede9fe; /* Gentle purple */
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --border-color: rgba(139, 92, 246, 0.08);
+  
+  /* Meditation-specific colors */
+  --meditation-primary: #8b5cf6;
+  --meditation-secondary: #10b981;
+  --meditation-accent: #3b82f6;
+  --calm-blue: #60a5fa;
+  --peace-purple: #a78bfa;
+  --zen-green: #34d399;
+}
+

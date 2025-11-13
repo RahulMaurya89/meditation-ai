@@ -1,0 +1,300 @@
+:root {
+    --primary-brand-color: #667eea;
+    --primary-text-color: #678be7;
+    --secondary-text-color: #7392f8;
+    --background-color: #f7f8fc;
+    --card-background-color: #ffffff;
+    --card-border-color: #eef2f9;
+    --card-shadow-color: rgba(93, 107, 255, 0.08);
+}
+
+.dashboard-container {
+    /* background-color: var(--background-color); */
+    background-color: transparent;
+    min-height: 100vh;
+    padding: 80px 20px 40px 20px; /* Increased top padding */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dashboard-header {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem); /* Responsive font size */
+    color: var(--primary-text-color);
+    font-weight: 700;
+}
+
+.dashboard-header p {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: var(--secondary-text-color);
+    margin-top: 8px;
+}
+
+.btn-logout {
+    position: relative;
+    top: 5dvh;
+    right: 20px;
+    background-color: transparent;
+    color: #ff4d4d; /* A reddish color for logout */
+    border: 1px solid #ff4d4d;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px; /* Pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-logout:hover,
+.btn-logout:focus {
+    background-color: #ff4d4d;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(255, 77, 77, 0.3);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card styles */
+.card {
+    background: var(--card-background-color);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 16px var(--card-shadow-color);
+    border: 1px solid var(--card-border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px var(--card-shadow-color);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #3c4a77;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.card-icon {
+    margin-right: 12px;
+    font-size: 1.5rem;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+}
+
+/* Account Status Card */
+.account-tier {
+    font-size: 1rem;
+    color: #3c4a77;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tier-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+.tier-trial { background: #fffbeb; color: #b45309; }
+.tier-free { background: #eff6ff; color: #1d4ed8; }
+.tier-pro { background: #f0fdf4; color: #15803d; }
+
+.trial-notice {
+    margin-top: 15px;
+    padding: 12px;
+    background: #fff3cd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #856404;
+    text-align: center;
+}
+
+/* Stats Card */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+}
+
+.stat-item {
+    background: #f8f9ff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--primary-brand-color);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--secondary-text-color);
+    margin-top: 5px;
+}
+
+/* Payment Details Card */
+.payment-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.detail-item {
+    background: #f8f9ff;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.detail-label {
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #3c4a77;
+    text-transform: capitalize;
+}
+
+.detail-value.plan-name {
+    color: var(--primary-brand-color);
+}
+
+.detail-value.status-active {
+    color: #16a34a;
+}
+
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #5d6bff 0%, #8b5cf6 100%);
+    color: white;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(93, 107, 255, 0.2);
+}
+
+.btn-secondary {
+    background: #f0f5ff;
+    color: #4361ee;
+    border-color: #dbe4ff;
+}
+.btn-secondary:hover {
+    background: #e6edff;
+    transform: translateY(-2px);
+}
+
+/* Loaders and Errors */
+.dashboard-loader, .dashboard-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+}
+
+.dashboard-footer {
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333; /* A subtle separator */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "status status usage usage"
+            "sub sub payment payment";
+    }
+    .dashboard-grid > :nth-child(1) { grid-area: status; }
+    .dashboard-grid > :nth-child(2) { grid-area: usage; }
+    .dashboard-grid > :nth-child(3) { grid-area: sub; }
+    .dashboard-grid > :nth-child(4) { grid-area: payment; }
+}
+
+@media (min-width: 1200px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "status usage sub"
+            "payment payment sub";
+    }
+    .dashboard-grid > :nth-child(1) { grid-area: status; }
+    .dashboard-grid > :nth-child(2) { grid-area: usage; }
+    .dashboard-grid > :nth-child(3) { grid-area: sub; }
+    .dashboard-grid > :nth-child(4) { grid-area: payment; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn-logout {
+        width: 80%;
+        max-width: 300px;
+        padding: 12px;
+    }
+
+    .dashboard-footer {
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
+    }
+}
